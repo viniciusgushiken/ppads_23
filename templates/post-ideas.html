@@ -1,0 +1,260 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+
+<!-- Product Page -->
+<div class="container-lg">
+  <div class="row">
+
+    <!-- Left Container -->
+    <div class="overflow-y-auto px-0 border border-gray-50 rounded bg-gray-50 col-12 col-md-6">
+      <form class="d-flex flex-column h-full">
+
+        <!-- Product Overview -->
+        <div class="d-flex items-center px-6 py-4 bg-white border-bottom border-gray-50">
+          
+          <!-- Product Icon -->
+          <div class="mr-6">
+            <div class="d-flex items-center justify-center text-gray-500">
+              <div class="icon-circle border bg-white text-white mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="gray" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                  <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <!-- Product Header -->
+            <h4 class="text-xl font-bold text-gray-900">Ideias para Posts</h4>
+
+            <!-- Product Description -->
+            <p class="w-full text-sm text-gray-500">
+              Obtenha novas ideais para criar seus posts nas redes sociais!
+            </p>
+          </div>
+        </div>
+
+        <!-- User's Form -->
+        <div class="p-3 flex-1">
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+              
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 flex items-center">
+                  <label for="form-field-videoTopic"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Segmento geral que você quer falar sobre
+                  </label>
+                </div>
+              </div>
+                
+              <!-- Input -->
+              <div class="flex items-center">
+                <input type="text" class="form-control" name="assunto" placeholder="Esportes, Skin-Care, Empreendedorismo, Contabilidade, Arquitetura ...">
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+              
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">  
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-keyword"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Rede Social
+                  </label>
+                </div>
+              </div>
+
+              <!-- Select -->
+              <div class="d-flex items-center">
+                <select class="form-control" name="rede-social">
+                  <option value="">Geral</option>
+                  <option value="Reels do Instagram">Reels - Instagram</option>
+                  <option value="Foto do Instagram">Foto - Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="Linkedin">Linkedin</option>
+                  <option value="Video no TikTok">TikTok</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-tone"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Tom da Mensagem
+                  </label>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="d-flex items-center">
+                <select class="form-control" name="tom">
+                  <option value="">Neutro</option>
+                  <option value="alegre">Alegre</option>
+                  <option value="emocionado">Emocionado</option>
+                  <option value="apelativo">Apelativo</option>
+                  <option value="urgente">Urgente</option>
+                  <option value="engraçado">Engraçado</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Submit -->
+        <div class="d-flex items-center justify-between px-3 pb-3 border-b border-gray-200 pointer-events-auto xl:py-3 bg-gray-50 xl:bg-white xl:border-t xl:border-0 xl:border-gray-200 xl:px-6">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <div class="loading" style="display: none;">Carregando...</div>
+            <span class="button-span">Gerar conteúdo</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Right Container -->
+    <div class="overflow-y-auto xl:w-1/2 col-12 col-md-6">
+      <div class="mb-24 lg:mb-auto">
+
+        <!-- Navbar -->
+        <div id="ai-response" class="px-3 mt-5 mt-md-0">
+          <!-- <span class="badge rounded-pill bg-dark-soft">
+            <span class="h5">resposta da REDATORA:</span>
+          </span> -->
+        </div>
+
+        <!-- Notification -->
+        <div id="vazia" class="d-flex flex-column items-center justify-center my-20 py-40">
+          <div class="max-w-lg position-relative py-3 pl-6 rounded border border-gray-50">
+            <div class="position-absolute inset-y-0 left-0 d-flex items-center justify-center w-8 bg-gray-50 rounded">
+              <!-- <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" width="24" height="24"
+                class="block w-4 h-4 text-gray-500 ">
+                <path fill-rule="evenodd"
+                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                  clip-rule="evenodd"></path>
+              </svg> -->
+            </div>
+            <div class="flex-grow mx-2 pl-2 pr-4 text-left">
+              <div class="mb-1 text-sm font-medium text-gray-500">Preencha os campos ao lado</div>
+              <div>Obtenha os melhores resultados tentando várias combinações</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- chat bot -->
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+  (function () {
+    window.onload = function () {
+      new BlipChat()
+        .withAppKey('cmVkYXRvcmFhaTo1NjdiMmRjYi0yMzRmLTRiZmUtOTNmMC05NzUyY2M3MzQ2YmY=')
+        .withButton({ "color": "#2CC3D5", "icon": "" })
+        .withCustomCommonUrl('https://chat.blip.ai/')
+        .build();
+    }
+  })();
+</script>
+
+
+<!-- jquery para loading e POST -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("form").submit(function(e) {
+    // Prevent the form from being submitted
+    e.preventDefault();
+  
+    // Show the loading div
+    $(".button-span").hide()
+    $(".loading").show();
+    
+  
+    // Disable the submit button
+    $("button[type='submit']").prop("disabled", true);
+
+    var input = "Escreva 5 ideais de posts acerca do tema "
+
+    if ($("input[name='assunto']").val() != "") {
+      input += $("input[name='assunto']").val()
+    }
+    if ($("select[name='rede-social']").val() != "") {
+      input += " para o " + $("select[name='rede-social']").val()
+    }
+    if ($("select[name='tom']").val() != "") {
+      input += " em um tom " + $("select[name='tom']").val()
+    }
+
+    input += " e não inclua hashtags.";
+    
+    console.log(input)
+
+    var category = "post-ideas"
+    
+    // Submit the form using jQuery's ajax function
+    $.ajax({
+      type: "POST",
+      url: "/airequest",
+      contentType: "application/json",
+      data: JSON.stringify({
+        input: input,
+        category: category
+      }),
+      success: function(response) {
+        // Hide the loading div
+        $(".loading").hide();
+        $(".button-span").show()
+  
+        // Enable the submit button
+        $("button[type='submit']").prop("disabled", false);
+  
+        // Do something with the response
+        $("#ai-response").prepend(`
+          <div class="px-6 py-3 border-bottom border-gray-200 group cursor-pointer bg-green-50 hover:bg-green-300/5">          
+            <div class="w-full mt-2 mb-3 text-base font-medium leading-7 text-gray-800 whitespace-pre-wrap pre">
+              ${response.trim().replace(/\n\n/g, "\n").replace(/\n/g, "<br><br>")}
+            </div>
+          </div>
+        `)
+        console.log(response)
+        // ...
+      },
+      
+      error: function(error) {
+
+        // Deslogando usuário
+        window.location.replace('/logout');
+      }
+    });
+  });
+</script>
+
+
+{% endblock %}

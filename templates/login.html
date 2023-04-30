@@ -1,0 +1,43 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="container">
+    <!-- Brand -->
+    <a href="/" class="navbar-brand">Redatora.ai</a>
+  </div>
+</nav>
+
+<!-- Form -->
+<div class="container p-5 pt-0" style="max-width: 480px; border: 1px solid #ced4da; border-radius: 10px;">
+  <!-- Error message -->
+  {% if message %}
+  <div class="alert mt-1 alert-danger text-center" role="alert">
+      {{message}}
+  </div>
+  {% else %}
+  <!-- div vazia -->
+  <div class="pt-5"></div>
+  {% endif %}
+
+  <h1 class="text-center">Login</h1>
+  <form action='/login' method='POST'>
+    <div class="form-outline mb-4">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp">
+    </div>
+    <div class="form-outline mb-4">
+      <label for="inputPassword" class="form-label">Senha</label>
+      <input type="password" class="form-control" name="password" id="inputPassword">
+    </div>
+    <div class="text-center pt-4">
+      <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+      <p>Não tem conta? <a href="/signup">Cadastrar</a></p>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="container">
+    <!-- Brand -->
+    <a href="/" class="navbar-brand">Redatora.ai</a>
+  </div>
+</nav>
+
+
+{% if signup_verify %}
+<div class="alert alert-success text-center" role="alert">
+    Verifique seu email para confirmar o cadastro!
+</div>
+{% endif %}
+
+{% if signup_fail %}
+<div class="alert alert-danger text-center" role="alert">
+    {{signup_fail}}
+</div>
+{% endif %}
+
+<div class="container p-5" style="max-width: 480px; border: 1px solid #ced4da; border-radius: 10px;">
+  <h1 class="text-center">Cadastro</h1>
+  <form action='/signup' method='POST'>
+    <div class="form-outline mb-4">
+        <label for="exampleInputEmail1" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="fullName">
+      </div>
+    <div class="form-outline mb-4">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+    </div>
+    <div class="form-outline mb-4">
+      <label for="exampleInputPassword1" class="form-label">Senha</label>
+      <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+    </div>
+    <div class="text-center pt-4">
+      <button type="submit" class="btn btn-primary btn-block mb-4">Cadastrar</button>
+      <p>Já tem conta? <a href="/login">Entrar</a></p>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

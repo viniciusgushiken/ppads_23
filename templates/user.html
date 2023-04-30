@@ -1,0 +1,84 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>💳 Utilização</h1>
+    <p class="lead">
+      Acompanhe a sua utilização e a estimativa da cobrança mensal
+    </p>
+
+    <h2>Informações</h2> 
+    <br>
+
+    <h5>Usuário</h5>
+    <p id="email"></p>
+
+    <h5>Total de tokens utilizados</h5>
+    <p id="total_sum_tokens"></p>
+
+    <h5>Preço a cada 100 tokens*</h5>
+
+    <p id="preco_cem_tokens_formatado"></p>
+
+    <h5>Valor de utilização</h5>
+    <p id="valor_utilizacao"></p>
+
+    <h5>Mensalidade</h5>
+    <p>R$ <span id="mensalidade"></span></p>
+
+    <h5>Valor total</h5>
+    <p id="valor_utilizacao_formatado"></p><br><br>
+
+
+    <p><small><small>*100 tokens equivalem em média a um parágrafo</small></small></p>
+    
+
+</main>
+
+
+<!-- chat bot -->
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+            .withAppKey('cmVkYXRvcmFhaTo1NjdiMmRjYi0yMzRmLTRiZmUtOTNmMC05NzUyY2M3MzQ2YmY=')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .withCustomCommonUrl('https://chat.blip.ai/')
+            .build();
+        }
+    })();
+</script>
+
+<script>
+  $.ajax({
+      type: "GET",
+      url: "/userinfo",
+      contentType: "application/json",
+      
+      success: function (response) {
+
+        // Colocando os dados na página
+        $("#email").text(response["email"])
+        $("#total_sum_tokens").text(response["total_sum_tokens"])
+        $("#preco_cem_tokens_formatado").text(response["preco_cem_tokens_formatado"])
+        $("#valor_utilizacao").text(response["valor_utilizacao"])
+        $("#mensalidade").text(response["mensalidade"])
+        $("#valor_utilizacao_formatado").text(response["valor_utilizacao_formatado"])
+      },
+
+      error: function(error) {
+
+        // Deslogando usuário
+        window.location.replace('/logout');
+      }
+    });
+</script>
+
+{% endblock %}

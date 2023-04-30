@@ -1,0 +1,311 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+
+<!-- Product Page -->
+<div class="container-lg">
+  <div class="row">
+
+    <!-- Left Container -->
+    <div class="overflow-y-auto px-0 border border-gray-50 rounded bg-gray-50 col-12 col-md-6">
+      <form class="d-flex flex-column h-full">
+
+        <!-- Product Overview -->
+        <div class="d-flex items-center px-6 py-4 bg-white border-bottom border-gray-50">
+          
+          <!-- Product Icon -->
+          <div class="mr-6">
+            <div class="d-flex items-center justify-center text-gray-500">
+              <div class="icon-circle border bg-white text-white mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="gray" class="bi bi-badge-ad" viewBox="0 0 16 16">
+                  <path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
+                  <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <!-- Product Header -->
+            <h4 class="text-xl font-bold text-gray-900">Criação de Anúncios</h4>
+
+            <!-- Product Description -->
+            <p class="w-full text-sm text-gray-500">
+              Crie um anúncio para qualquer tipo de produto, basta inserir algumas informações que deseja para sua companha
+            </p>
+          </div>
+        </div>
+
+        <!-- User's Form -->
+        <div class="p-3 flex-1">
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+              
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 flex items-center">
+                  <label for="form-field-videoTopic"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                    Produto
+                  </label>
+                </div>
+              </div>
+                
+              <!-- Input -->
+              <div class="flex items-center">
+                <input id="form-field-videoTopic"
+                  class="form-control"
+                  placeholder="iPhone 13" type="text" maxlength="80" name="produto" value="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+              
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">  
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-keyword"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                    Caracteristicas
+                  </label>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="d-flex items-center">
+                <input id="form-field-keyword"
+                  class="form-control"
+                  placeholder="Cor dourada, 256G de memória" type="text" maxlength="80" name="caracteristicas" value="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-tone"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Público alvo
+                  </label>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="d-flex items-center">
+                <input id="form-field-tone"
+                  class="form-control"
+                  placeholder="Adultos" type="text" maxlength="80" name="publico alvo" value="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-tone"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Objetivo do anúncio
+                  </label>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="d-flex items-center">
+                <input id="form-field-tone"
+                  class="form-control"
+                  placeholder="Aumentar as vendas, lançamento de produto etc" type="text" maxlength="80" name="objetivo" value="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Container -->
+          <div class="mb-6 last:mb-1">
+            <div class="d-flex flex-column flex-1">
+
+              <!-- Label -->
+              <div class="d-flex justify-end items-center">
+                <div class="flex-grow mb-1 d-flex items-center">
+                  <label for="form-field-tone"
+                    class="text-sm font-medium dark:text-gray-300 text-gray-700">
+                      Canal
+                  </label>
+                </div>
+              </div>
+
+              <!-- Select -->
+              <div class="d-flex items-center">
+                <select class="form-control" name="canal">
+                  <option value="">Geral</option>
+                  <option value="Google Ads">Google Ads</option>
+                  <option value="Facebook Ads">Facebook/Instagram Ads</option>
+                  <option value="Linkedin">Linkedin Ads</option>
+                  <option value="TikTok Ads">TikTok Ads</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Submit -->
+        <div class="d-flex items-center justify-between px-3 pb-3 border-b border-gray-200 pointer-events-auto xl:py-3 bg-gray-50 xl:bg-white xl:border-t xl:border-0 xl:border-gray-200 xl:px-6">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <div class="loading" style="display: none;">Carregando...</div>
+            <span class="button-span">Gerar conteúdo</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Right Container -->
+    <div class="overflow-y-auto xl:w-1/2 col-12 col-md-6">
+      <div class="mb-24 lg:mb-auto">
+
+        <!-- Navbar -->
+        <div id="ai-response" class="px-3 mt-5 mt-md-0">
+          <!-- <span class="badge rounded-pill bg-dark-soft">
+            <span class="h5">resposta da REDATORA:</span>
+          </span> -->
+        </div>
+
+        <!-- Notification -->
+        <div id="vazia" class="d-flex flex-column items-center justify-center my-20 py-40">
+          <div class="max-w-lg position-relative py-3 pl-6 rounded border border-gray-50">
+            <div class="position-absolute inset-y-0 left-0 d-flex items-center justify-center w-8 bg-gray-50 rounded">
+              <!-- <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" width="24" height="24"
+                class="block w-4 h-4 text-gray-500 ">
+                <path fill-rule="evenodd"
+                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                  clip-rule="evenodd"></path>
+              </svg> -->
+            </div>
+            <div class="flex-grow mx-2 pl-2 pr-4 text-left">
+              <div class="mb-1 text-sm font-medium text-gray-500">Preencha os campos ao lado</div>
+              <div>Obtenha os melhores resultados tentando várias combinações</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- chat bot -->
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+  (function () {
+    window.onload = function () {
+      new BlipChat()
+        .withAppKey('cmVkYXRvcmFhaTo1NjdiMmRjYi0yMzRmLTRiZmUtOTNmMC05NzUyY2M3MzQ2YmY=')
+        .withButton({ "color": "#2CC3D5", "icon": "" })
+        .withCustomCommonUrl('https://chat.blip.ai/')
+        .build();
+    }
+  })();
+</script>
+
+
+<!-- jquery para loading e POST -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("form").submit(function(e) {
+    // Prevent the form from being submitted
+    e.preventDefault();
+  
+    // Show the loading div
+    $(".button-span").hide()
+    $(".loading").show();
+    
+  
+    // Disable the submit button
+    $("button[type='submit']").prop("disabled", true);
+
+    var input = "Crie um anúncio com título, subtítulo, descrição e call to action"
+
+    if ($("input[name='produto']").val() != "") {
+      input += " de " + $("input[name='produto']").val()
+    }
+    if ($("input[name='caracteristicas']").val() != "") {
+      input += " com as características " + $("input[name='caracteristicas']").val()
+    }
+    if ($("select[name='canal']").val() != "") {
+      input += " no modelo de " + $("select[name='canal']").val()
+    }
+    if ($("input[name='objetivo']").val() != "") {
+      input += " com objetivo de " +  $("input[name='objetivo']").val()
+    }
+    if ($("input[name='publico alvo']").val() != "") {
+      input += " para o público de " + $("input[name='publico alvo']").val()
+    }
+    if ($("select[name='tom']").val() != "") {
+      input += " com a descrição em um tom " + $("select[name='tom']").val()
+    }
+
+    input += ".";
+    
+    console.log(input)
+
+    var category = "create-ads"
+    
+    // Submit the form using jQuery's ajax function
+    $.ajax({
+      type: "POST",
+      url: "/airequest",
+      contentType: "application/json",
+      data: JSON.stringify({
+        input: input,
+        category: category
+      }),
+      success: function(response) {
+        // Hide the loading div
+        $(".loading").hide();
+        $(".button-span").show()
+  
+        // Enable the submit button
+        $("button[type='submit']").prop("disabled", false);
+  
+        // Do something with the response
+        $("#ai-response").prepend(`
+          <div class="px-6 py-3 border-bottom border-gray-200 group cursor-pointer bg-green-50 hover:bg-green-300/5">          
+            <div class="w-full mt-2 mb-3 text-base font-medium leading-7 text-gray-800 whitespace-pre-wrap pre">
+              ${response.trim().replace(/\n\n/g, "\n").replace(/\n/g, "<br><br>")}
+            </div>
+          </div>
+        `)
+        console.log(response)
+        // ...
+      },
+      
+      error: function(error) {
+
+        // Deslogando usuário
+        window.location.replace('/logout');
+      }
+    });
+  });
+</script>
+
+
+{% endblock %}
