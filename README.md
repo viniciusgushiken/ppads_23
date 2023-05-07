@@ -4,7 +4,7 @@ Projeto final da matéria Prática Profissional em Análise e Desenvolvimento de
 A stack utilizada nesse projeto é Python, Flask, Firebase e OpenAI.
 
 
-Para o funcionamento da aplicação localmente. Após clonar o reposItório localmente,
+Para o funcionamento da aplicação localmente. Após clonar o repositório localmente,
 
 1. É necessário instalar as dependências necessárias com o comando
 
