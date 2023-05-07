@@ -1,14 +1,14 @@
-# ppads_23
+# ppads_23 - Manual do Usuário
 Projeto final da matéria Prática Profissional em Análise e Desenvolvimento de Sistemas.
 
 A stack utilizada nesse projeto é Python, Flask, Firebase e OpenAI.
 
 
-Para o funcionamento da aplicação localmente. 
+Para o funcionamento da aplicação localmente. Após clonar o reposotório localmente,
 
 1. É necessário instalar as dependencias necessárias com o comando
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 2. Crie um arquivo `config.py` com as suas credenciais do Firebase e a sua chave da OpenAi. Vale ressaltar que tanto o Firebase quanto a OpenAi é
  possível criar as chaves de forma gratuita.
